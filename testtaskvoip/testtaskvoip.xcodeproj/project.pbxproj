@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3902A0A21B1543BA00D0445D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3902A0A11B1543BA00D0445D /* main.m */; };
+		3902A0A51B1543BA00D0445D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3902A0A41B1543BA00D0445D /* AppDelegate.m */; };
+		3902A0A81B1543BA00D0445D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3902A0A71B1543BA00D0445D /* ViewController.m */; };
+		3902A0AD1B1543BA00D0445D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3902A0AC1B1543BA00D0445D /* Images.xcassets */; };
+		3902A0BC1B1543BA00D0445D /* testtaskvoipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3902A0BB1B1543BA00D0445D /* testtaskvoipTests.m */; };
+		3902A0C71B15457500D0445D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3902A0C61B15457500D0445D /* ViewController.xib */; };
+		3902A0C91B154A8300D0445D /* voip_services.cer in Resources */ = {isa = PBXBuildFile; fileRef = 3902A0C81B154A8300D0445D /* voip_services.cer */; };
+		3902A0F31B1C82AF00D0445D /* KMP_CFNetworkingConnection.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3902A0F21B1C82AF00D0445D /* KMP_CFNetworkingConnection.mm */; };
+		3902A1171B1CDAEB00D0445D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A1161B1CDAEB00D0445D /* Accelerate.framework */; };
+		3902A1191B1CDAF800D0445D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A1181B1CDAF800D0445D /* AudioToolbox.framework */; };
+		3902A11D1B1CDB0A00D0445D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A11C1B1CDB0A00D0445D /* AVFoundation.framework */; };
+		3902A11F1B1CDB1000D0445D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A11E1B1CDB1000D0445D /* CFNetwork.framework */; };
+		3902A1211B1CDB3D00D0445D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A1201B1CDB3D00D0445D /* CoreGraphics.framework */; };
+		3902A1231B1CDB5400D0445D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A1221B1CDB5400D0445D /* OpenGLES.framework */; };
+		3902A1251B1CDB8900D0445D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A1241B1CDB8900D0445D /* SystemConfiguration.framework */; };
+		3902A1271B1CDB9500D0445D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A1261B1CDB9500D0445D /* UIKit.framework */; };
+		3902A1291B1CDB9E00D0445D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3902A1281B1CDB9E00D0445D /* Foundation.framework */; };
+		390D13B11B20A60D008294EF /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D13AD1B20A60D008294EF /* AsyncSocket.m */; };
+		390D13B21B20A60D008294EF /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D13AF1B20A60D008294EF /* AsyncUdpSocket.m */; };
+		390D13B31B20A60D008294EF /* Documentation.html in Resources */ = {isa = PBXBuildFile; fileRef = 390D13B01B20A60D008294EF /* Documentation.html */; };
+		390D13B81B20A708008294EF /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D13B51B20A708008294EF /* GCDAsyncSocket.m */; };
+		390D13B91B20A708008294EF /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D13B71B20A708008294EF /* GCDAsyncUdpSocket.m */; };
+		390D13C31B2362AE008294EF /* NSStream+StreamToHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D13C21B2362AE008294EF /* NSStream+StreamToHost.m */; };
+		390D13C71B23649E008294EF /* KMP_NetworkingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D13C61B23649E008294EF /* KMP_NetworkingController.m */; };
+		390D13CA1B236D65008294EF /* KMP_NSStreamController.m in Sources */ = {isa = PBXBuildFile; fileRef = 390D13C91B236D65008294EF /* KMP_NSStreamController.m */; };
+		391B68A91B26FDD800F6C296 /* CFSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 391B68A81B26FDD800F6C296 /* CFSocketClient.m */; };
+		391B68AF1B26FE3C00F6C296 /* CFNetworkUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 391B68AD1B26FE3C00F6C296 /* CFNetworkUtilities.m */; };
+		391B68B21B2703FF00F6C296 /* CFSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 391B68B11B2703FF00F6C296 /* CFSocketServer.m */; };
+		3927EE031B1DDEF300CA8FA1 /* AudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3927EE021B1DDEF300CA8FA1 /* AudioController.mm */; };
+		3943D2D11B2DFCEF0009AABC /* msg.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3943D2CB1B2DFCEF0009AABC /* msg.caf */; };
+		3943D2D21B2DFCEF0009AABC /* msg.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3943D2CC1B2DFCEF0009AABC /* msg.wav */; };
+		3943D2D31B2DFCEF0009AABC /* ring.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3943D2CD1B2DFCEF0009AABC /* ring.caf */; };
+		3943D2D41B2DFCEF0009AABC /* ring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3943D2CE1B2DFCEF0009AABC /* ring.wav */; };
+		3943D2D51B2DFCEF0009AABC /* ringback.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3943D2CF1B2DFCEF0009AABC /* ringback.wav */; };
+		3943D2D61B2DFCEF0009AABC /* shortring.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3943D2D01B2DFCEF0009AABC /* shortring.caf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3902A0B61B1543BA00D0445D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3902A0941B1543BA00D0445D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3902A09B1B1543BA00D0445D;
+			remoteInfo = testtaskvoip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3902A09C1B1543BA00D0445D /* testtaskvoip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testtaskvoip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3902A0A01B1543BA00D0445D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3902A0A11B1543BA00D0445D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3902A0A31B1543BA00D0445D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3902A0A41B1543BA00D0445D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3902A0A61B1543BA00D0445D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3902A0A71B1543BA00D0445D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3902A0AC1B1543BA00D0445D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3902A0B51B1543BA00D0445D /* testtaskvoipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testtaskvoipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3902A0BA1B1543BA00D0445D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3902A0BB1B1543BA00D0445D /* testtaskvoipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testtaskvoipTests.m; sourceTree = "<group>"; };
+		3902A0C51B1544ED00D0445D /* MyPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPrefixHeader.pch; sourceTree = "<group>"; };
+		3902A0C61B15457500D0445D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		3902A0C81B154A8300D0445D /* voip_services.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = voip_services.cer; sourceTree = "<group>"; };
+		3902A0F11B1C82AF00D0445D /* KMP_CFNetworkingConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMP_CFNetworkingConnection.h; sourceTree = "<group>"; };
+		3902A0F21B1C82AF00D0445D /* KMP_CFNetworkingConnection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KMP_CFNetworkingConnection.mm; sourceTree = "<group>"; };
+		3902A1161B1CDAEB00D0445D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3902A1181B1CDAF800D0445D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3902A11C1B1CDB0A00D0445D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3902A11E1B1CDB1000D0445D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3902A1201B1CDB3D00D0445D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3902A1221B1CDB5400D0445D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3902A1241B1CDB8900D0445D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3902A1261B1CDB9500D0445D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3902A1281B1CDB9E00D0445D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		390D13AC1B20A60D008294EF /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		390D13AD1B20A60D008294EF /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		390D13AE1B20A60D008294EF /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		390D13AF1B20A60D008294EF /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		390D13B01B20A60D008294EF /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
+		390D13B41B20A708008294EF /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		390D13B51B20A708008294EF /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		390D13B61B20A708008294EF /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		390D13B71B20A708008294EF /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		390D13C11B2362AE008294EF /* NSStream+StreamToHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+StreamToHost.h"; sourceTree = "<group>"; };
+		390D13C21B2362AE008294EF /* NSStream+StreamToHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+StreamToHost.m"; sourceTree = "<group>"; };
+		390D13C51B23649E008294EF /* KMP_NetworkingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMP_NetworkingController.h; sourceTree = "<group>"; };
+		390D13C61B23649E008294EF /* KMP_NetworkingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMP_NetworkingController.m; sourceTree = "<group>"; };
+		390D13C81B236D65008294EF /* KMP_NSStreamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMP_NSStreamController.h; sourceTree = "<group>"; };
+		390D13C91B236D65008294EF /* KMP_NSStreamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMP_NSStreamController.m; sourceTree = "<group>"; };
+		391B68A71B26FDD800F6C296 /* CFSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSocketClient.h; sourceTree = "<group>"; };
+		391B68A81B26FDD800F6C296 /* CFSocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSocketClient.m; sourceTree = "<group>"; };
+		391B68AD1B26FE3C00F6C296 /* CFNetworkUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFNetworkUtilities.m; sourceTree = "<group>"; };
+		391B68AE1B26FE3C00F6C296 /* CFNetworkUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFNetworkUtilities.h; sourceTree = "<group>"; };
+		391B68B01B2703FF00F6C296 /* CFSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSocketServer.h; sourceTree = "<group>"; };
+		391B68B11B2703FF00F6C296 /* CFSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSocketServer.m; sourceTree = "<group>"; };
+		3927EE011B1DDEF300CA8FA1 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		3927EE021B1DDEF300CA8FA1 /* AudioController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioController.mm; sourceTree = "<group>"; };
+		3943D2CB1B2DFCEF0009AABC /* msg.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = msg.caf; sourceTree = "<group>"; };
+		3943D2CC1B2DFCEF0009AABC /* msg.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = msg.wav; sourceTree = "<group>"; };
+		3943D2CD1B2DFCEF0009AABC /* ring.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ring.caf; sourceTree = "<group>"; };
+		3943D2CE1B2DFCEF0009AABC /* ring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ring.wav; sourceTree = "<group>"; };
+		3943D2CF1B2DFCEF0009AABC /* ringback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringback.wav; sourceTree = "<group>"; };
+		3943D2D01B2DFCEF0009AABC /* shortring.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = shortring.caf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3902A0991B1543BA00D0445D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3902A1291B1CDB9E00D0445D /* Foundation.framework in Frameworks */,
+				3902A1271B1CDB9500D0445D /* UIKit.framework in Frameworks */,
+				3902A1251B1CDB8900D0445D /* SystemConfiguration.framework in Frameworks */,
+				3902A1231B1CDB5400D0445D /* OpenGLES.framework in Frameworks */,
+				3902A1211B1CDB3D00D0445D /* CoreGraphics.framework in Frameworks */,
+				3902A11F1B1CDB1000D0445D /* CFNetwork.framework in Frameworks */,
+				3902A11D1B1CDB0A00D0445D /* AVFoundation.framework in Frameworks */,
+				3902A1191B1CDAF800D0445D /* AudioToolbox.framework in Frameworks */,
+				3902A1171B1CDAEB00D0445D /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3902A0B21B1543BA00D0445D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3902A0931B1543BA00D0445D = {
+			isa = PBXGroup;
+			children = (
+				3902A10D1B1CD85C00D0445D /* frameworks */,
+				3902A09E1B1543BA00D0445D /* testtaskvoip */,
+				3902A0B81B1543BA00D0445D /* testtaskvoipTests */,
+				3902A09D1B1543BA00D0445D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3902A09D1B1543BA00D0445D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3902A09C1B1543BA00D0445D /* testtaskvoip.app */,
+				3902A0B51B1543BA00D0445D /* testtaskvoipTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3902A09E1B1543BA00D0445D /* testtaskvoip */ = {
+			isa = PBXGroup;
+			children = (
+				3902A0A31B1543BA00D0445D /* AppDelegate.h */,
+				3902A0A41B1543BA00D0445D /* AppDelegate.m */,
+				3902A0A61B1543BA00D0445D /* ViewController.h */,
+				3902A0A71B1543BA00D0445D /* ViewController.m */,
+				3902A0C61B15457500D0445D /* ViewController.xib */,
+				3943D2CA1B2DFCEF0009AABC /* Resources */,
+				3902A1001B1CC43900D0445D /* audiounits */,
+				3902A0F41B1CC3B600D0445D /* PublicUtility */,
+				3902A0F01B1C827300D0445D /* networking */,
+				3902A0AC1B1543BA00D0445D /* Images.xcassets */,
+				3902A09F1B1543BA00D0445D /* Supporting Files */,
+			);
+			path = testtaskvoip;
+			sourceTree = "<group>";
+		};
+		3902A09F1B1543BA00D0445D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3902A0A01B1543BA00D0445D /* Info.plist */,
+				3902A0C81B154A8300D0445D /* voip_services.cer */,
+				3902A0A11B1543BA00D0445D /* main.m */,
+				3902A0C51B1544ED00D0445D /* MyPrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3902A0B81B1543BA00D0445D /* testtaskvoipTests */ = {
+			isa = PBXGroup;
+			children = (
+				3902A0BB1B1543BA00D0445D /* testtaskvoipTests.m */,
+				3902A0B91B1543BA00D0445D /* Supporting Files */,
+			);
+			path = testtaskvoipTests;
+			sourceTree = "<group>";
+		};
+		3902A0B91B1543BA00D0445D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3902A0BA1B1543BA00D0445D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3902A0F01B1C827300D0445D /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				390D13CB1B237CF8008294EF /* variant1 */,
+				391B68A31B26FC0400F6C296 /* variant2 */,
+				390D13C41B2363F9008294EF /* variant3 */,
+				390D13AB1B20A5B1008294EF /* AsyncSocket */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		3902A0F41B1CC3B600D0445D /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PublicUtility;
+			sourceTree = "<group>";
+		};
+		3902A1001B1CC43900D0445D /* audiounits */ = {
+			isa = PBXGroup;
+			children = (
+				3927EE011B1DDEF300CA8FA1 /* AudioController.h */,
+				3927EE021B1DDEF300CA8FA1 /* AudioController.mm */,
+			);
+			path = audiounits;
+			sourceTree = "<group>";
+		};
+		3902A10D1B1CD85C00D0445D /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3902A1281B1CDB9E00D0445D /* Foundation.framework */,
+				3902A1261B1CDB9500D0445D /* UIKit.framework */,
+				3902A1241B1CDB8900D0445D /* SystemConfiguration.framework */,
+				3902A1221B1CDB5400D0445D /* OpenGLES.framework */,
+				3902A1201B1CDB3D00D0445D /* CoreGraphics.framework */,
+				3902A11E1B1CDB1000D0445D /* CFNetwork.framework */,
+				3902A11C1B1CDB0A00D0445D /* AVFoundation.framework */,
+				3902A1181B1CDAF800D0445D /* AudioToolbox.framework */,
+				3902A1161B1CDAEB00D0445D /* Accelerate.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		390D13AB1B20A5B1008294EF /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				390D13B01B20A60D008294EF /* Documentation.html */,
+				390D13AC1B20A60D008294EF /* AsyncSocket.h */,
+				390D13AD1B20A60D008294EF /* AsyncSocket.m */,
+				390D13AE1B20A60D008294EF /* AsyncUdpSocket.h */,
+				390D13AF1B20A60D008294EF /* AsyncUdpSocket.m */,
+				390D13B41B20A708008294EF /* GCDAsyncSocket.h */,
+				390D13B51B20A708008294EF /* GCDAsyncSocket.m */,
+				390D13B61B20A708008294EF /* GCDAsyncUdpSocket.h */,
+				390D13B71B20A708008294EF /* GCDAsyncUdpSocket.m */,
+			);
+			name = AsyncSocket;
+			sourceTree = "<group>";
+		};
+		390D13C41B2363F9008294EF /* variant3 */ = {
+			isa = PBXGroup;
+			children = (
+				390D13C11B2362AE008294EF /* NSStream+StreamToHost.h */,
+				390D13C21B2362AE008294EF /* NSStream+StreamToHost.m */,
+				390D13C51B23649E008294EF /* KMP_NetworkingController.h */,
+				390D13C61B23649E008294EF /* KMP_NetworkingController.m */,
+				390D13C81B236D65008294EF /* KMP_NSStreamController.h */,
+				390D13C91B236D65008294EF /* KMP_NSStreamController.m */,
+			);
+			name = variant3;
+			sourceTree = "<group>";
+		};
+		390D13CB1B237CF8008294EF /* variant1 */ = {
+			isa = PBXGroup;
+			children = (
+				3902A0F11B1C82AF00D0445D /* KMP_CFNetworkingConnection.h */,
+				3902A0F21B1C82AF00D0445D /* KMP_CFNetworkingConnection.mm */,
+			);
+			name = variant1;
+			sourceTree = "<group>";
+		};
+		391B68A31B26FC0400F6C296 /* variant2 */ = {
+			isa = PBXGroup;
+			children = (
+				391B68A71B26FDD800F6C296 /* CFSocketClient.h */,
+				391B68A81B26FDD800F6C296 /* CFSocketClient.m */,
+				391B68B01B2703FF00F6C296 /* CFSocketServer.h */,
+				391B68B11B2703FF00F6C296 /* CFSocketServer.m */,
+				391B68AE1B26FE3C00F6C296 /* CFNetworkUtilities.h */,
+				391B68AD1B26FE3C00F6C296 /* CFNetworkUtilities.m */,
+			);
+			name = variant2;
+			sourceTree = "<group>";
+		};
+		3943D2CA1B2DFCEF0009AABC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3943D2CB1B2DFCEF0009AABC /* msg.caf */,
+				3943D2CC1B2DFCEF0009AABC /* msg.wav */,
+				3943D2CD1B2DFCEF0009AABC /* ring.caf */,
+				3943D2CE1B2DFCEF0009AABC /* ring.wav */,
+				3943D2CF1B2DFCEF0009AABC /* ringback.wav */,
+				3943D2D01B2DFCEF0009AABC /* shortring.caf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3902A09B1B1543BA00D0445D /* testtaskvoip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3902A0BF1B1543BA00D0445D /* Build configuration list for PBXNativeTarget "testtaskvoip" */;
+			buildPhases = (
+				3902A0981B1543BA00D0445D /* Sources */,
+				3902A0991B1543BA00D0445D /* Frameworks */,
+				3902A09A1B1543BA00D0445D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testtaskvoip;
+			productName = testtaskvoip;
+			productReference = 3902A09C1B1543BA00D0445D /* testtaskvoip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3902A0B41B1543BA00D0445D /* testtaskvoipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3902A0C21B1543BA00D0445D /* Build configuration list for PBXNativeTarget "testtaskvoipTests" */;
+			buildPhases = (
+				3902A0B11B1543BA00D0445D /* Sources */,
+				3902A0B21B1543BA00D0445D /* Frameworks */,
+				3902A0B31B1543BA00D0445D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3902A0B71B1543BA00D0445D /* PBXTargetDependency */,
+			);
+			name = testtaskvoipTests;
+			productName = testtaskvoipTests;
+			productReference = 3902A0B51B1543BA00D0445D /* testtaskvoipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3902A0941B1543BA00D0445D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "The Kondratyuks";
+				TargetAttributes = {
+					3902A09B1B1543BA00D0445D = {
+						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					3902A0B41B1543BA00D0445D = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 3902A09B1B1543BA00D0445D;
+					};
+				};
+			};
+			buildConfigurationList = 3902A0971B1543BA00D0445D /* Build configuration list for PBXProject "testtaskvoip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3902A0931B1543BA00D0445D;
+			productRefGroup = 3902A09D1B1543BA00D0445D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3902A09B1B1543BA00D0445D /* testtaskvoip */,
+				3902A0B41B1543BA00D0445D /* testtaskvoipTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3902A09A1B1543BA00D0445D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3943D2D21B2DFCEF0009AABC /* msg.wav in Resources */,
+				3902A0C71B15457500D0445D /* ViewController.xib in Resources */,
+				3943D2D11B2DFCEF0009AABC /* msg.caf in Resources */,
+				3943D2D51B2DFCEF0009AABC /* ringback.wav in Resources */,
+				3902A0AD1B1543BA00D0445D /* Images.xcassets in Resources */,
+				3943D2D41B2DFCEF0009AABC /* ring.wav in Resources */,
+				3943D2D31B2DFCEF0009AABC /* ring.caf in Resources */,
+				3902A0C91B154A8300D0445D /* voip_services.cer in Resources */,
+				390D13B31B20A60D008294EF /* Documentation.html in Resources */,
+				3943D2D61B2DFCEF0009AABC /* shortring.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3902A0B31B1543BA00D0445D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3902A0981B1543BA00D0445D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390D13C71B23649E008294EF /* KMP_NetworkingController.m in Sources */,
+				390D13CA1B236D65008294EF /* KMP_NSStreamController.m in Sources */,
+				3927EE031B1DDEF300CA8FA1 /* AudioController.mm in Sources */,
+				3902A0A81B1543BA00D0445D /* ViewController.m in Sources */,
+				3902A0A51B1543BA00D0445D /* AppDelegate.m in Sources */,
+				390D13B21B20A60D008294EF /* AsyncUdpSocket.m in Sources */,
+				391B68B21B2703FF00F6C296 /* CFSocketServer.m in Sources */,
+				3902A0A21B1543BA00D0445D /* main.m in Sources */,
+				390D13C31B2362AE008294EF /* NSStream+StreamToHost.m in Sources */,
+				391B68AF1B26FE3C00F6C296 /* CFNetworkUtilities.m in Sources */,
+				390D13B91B20A708008294EF /* GCDAsyncUdpSocket.m in Sources */,
+				390D13B81B20A708008294EF /* GCDAsyncSocket.m in Sources */,
+				3902A0F31B1C82AF00D0445D /* KMP_CFNetworkingConnection.mm in Sources */,
+				390D13B11B20A60D008294EF /* AsyncSocket.m in Sources */,
+				391B68A91B26FDD800F6C296 /* CFSocketClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3902A0B11B1543BA00D0445D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3902A0BC1B1543BA00D0445D /* testtaskvoipTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3902A0B71B1543BA00D0445D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3902A09B1B1543BA00D0445D /* testtaskvoip */;
+			targetProxy = 3902A0B61B1543BA00D0445D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3902A0BD1B1543BA00D0445D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3902A0BE1B1543BA00D0445D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3902A0C01B1543BA00D0445D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyPrefixHeader.pch";
+				INFOPLIST_FILE = testtaskvoip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3902A0C11B1543BA00D0445D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyPrefixHeader.pch";
+				INFOPLIST_FILE = testtaskvoip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3902A0C31B1543BA00D0445D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = testtaskvoipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testtaskvoip.app/testtaskvoip";
+			};
+			name = Debug;
+		};
+		3902A0C41B1543BA00D0445D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = testtaskvoipTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testtaskvoip.app/testtaskvoip";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3902A0971B1543BA00D0445D /* Build configuration list for PBXProject "testtaskvoip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3902A0BD1B1543BA00D0445D /* Debug */,
+				3902A0BE1B1543BA00D0445D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3902A0BF1B1543BA00D0445D /* Build configuration list for PBXNativeTarget "testtaskvoip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3902A0C01B1543BA00D0445D /* Debug */,
+				3902A0C11B1543BA00D0445D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3902A0C21B1543BA00D0445D /* Build configuration list for PBXNativeTarget "testtaskvoipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3902A0C31B1543BA00D0445D /* Debug */,
+				3902A0C41B1543BA00D0445D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3902A0941B1543BA00D0445D /* Project object */;
+}

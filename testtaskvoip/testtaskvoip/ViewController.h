@@ -13,8 +13,10 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *makeResetCallButton;
+@property (weak, nonatomic) IBOutlet UIButton *acceptVoIPCallButton;
 
-- (IBAction)makeCallByVoIP:(id)sender;
+- (IBAction)makeCallByVoIP:             (id) sender;
+- (IBAction)acceptVoIPCallButtonDidTap: (id) sender;
 
 @end
 

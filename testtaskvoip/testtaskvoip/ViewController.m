@@ -12,15 +12,17 @@
 #import "KMP_NSStreamController.h"
 
 #import "CFSocketServer.h"
+#import <AVFoundation/AVFoundation.h>
 
 
-@interface ViewController ()
+@interface ViewController () <
+                                CFSocketServerDelegate,
+                                AVAudioPlayerDelegate
+                             >
 {
 
     //AudioController            *audioController;
     //KMP_NSStreamController     *streamController;
-    
-    AVAudioPlayer                *_audioPlayer;
 }
 
 @property (nonatomic, strong) AudioController        *audioController;
@@ -29,9 +31,9 @@
 
 @property (nonatomic, strong) CFSocketServer         *voipCFSocketServer;
 
+@property (nonatomic, strong) AVAudioPlayer          *audioPlayer;
 
 @end
-
 
 
 @implementation ViewController
@@ -41,6 +43,21 @@
     [super viewDidLoad];
     
     [self createRingSound];
+    
+    self.acceptVoIPCallButton.hidden = YES;
+    
+    //__weak __typeof__(self) weakSelf = self;
+    
+    dispatch_queue_t dispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(
+                    dispatchQueue,
+                    ^(void)
+                     {
+                         self.voipCFSocketServer = [[CFSocketServer alloc]    initOnPort: 5060
+                                                                           andServerType: SERVERTYPEVOIP];
+                         self.voipCFSocketServer.delegate = self;
+                     }
+                   );
     
 }
 
@@ -58,11 +75,11 @@
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"ring" withExtension:@"caf"];
     
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:(NSURL*)url error:&error];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:(NSURL*)url error:&error];
+    
+    [self.audioPlayer prepareToPlay];
 
 }
-
-
 
 
 
@@ -114,6 +131,11 @@
 
 }
 
+- (IBAction)acceptVoIPCallButtonDidTap:(id)sender
+{
+    MDLog(@"\n\n\n");
+}
+
 #pragma mark
 #pragma mark   NSStreamDelegate  conforms
 
@@ -144,6 +166,52 @@ typedef NS_OPTIONS(NSUInteger, NSStreamEvent) {
     MDLog(@"aStream: %@\neventCode = %@ \n\n\n", aStream, [printDictionary objectForKey: @(eventCode) ] );
 
 }
+
+
+//@protocol CFSocketServerDelegate <NSObject>
+//
+//@optional
+//
+//- (void) needAcceptConnectionVoIPCall: (CFSocketServer *) theCFSocketServer;
+//
+//@end
+
+#pragma mark
+#pragma mark   CFSocketServerDelegate  conforms
+
+
+- (void) needAcceptConnectionVoIPCall: (CFSocketServer *) theCFSocketServer
+
+{
+    //CFSocketServer *
+    self.acceptVoIPCallButton.hidden = NO;
+    
+    [self.audioPlayer play];
+    
+}
+
+
+- (void)audioPlayerDidFinishPlaying: (AVAudioPlayer *)player
+                       successfully: (BOOL)flag
+{
+    NSLog(@"Finished playing the song");
+    /* The [flag] parameter tells us if the playback was successfully
+     finished or not */
+    
+    
+//    if ([player isEqual:self.audioPlayer])
+//    {
+//        self.audioPlayer = nil;
+//    }
+//    else
+//    {
+//        /* Which audio player is this? We certainly didn't allocate
+//         this instance! */
+//    }
+}
+
+
+@end
 
 
 //#pragma mark
@@ -189,4 +257,3 @@ typedef NS_OPTIONS(NSUInteger, NSStreamEvent) {
 //
 //
 
-@end

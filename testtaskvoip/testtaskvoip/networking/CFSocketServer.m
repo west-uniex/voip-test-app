@@ -81,9 +81,9 @@ typedef NS_ENUM (NSUInteger, CFSocketServerState)
         
         //  bind a name to a socket
         int result = bind (
-                            listenfd,                       // int                   socket
-                            (struct sockaddr *)&servaddr,   // const struct sockaddr *address
-                            sizeof(servaddr)                // socklen_t             address_len
+                             listenfd,                       // int                   socket
+                             (struct sockaddr *)&servaddr,   // const struct sockaddr *address
+                             sizeof(servaddr)                // socklen_t             address_len
                           );
         if ( result < 0)
         {
@@ -149,7 +149,7 @@ typedef NS_ENUM (NSUInteger, CFSocketServerState)
                 }
                 else
                 {
-                    NSLog(@"Starting");
+                    MDLog(@"\nStarting LEASENING\n\n\n");
                     source = CFSocketCreateRunLoopSource (
                                                             NULL,
                                                             self.sRef,

@@ -39,9 +39,7 @@
 {
     if (self.controllerType == SERVER)
     {
-        self.voipCFSocketServer = [[CFSocketServer alloc]    initOnPort: 5060
-                                                          andServerType: SERVERTYPEVOIP];
-        
+        ALog(@"BAD case ");
     }
     
     

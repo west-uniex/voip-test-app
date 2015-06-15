@@ -47,13 +47,17 @@ typedef  NS_ENUM(NSUInteger, CFNetworkServerType)
 
 @interface CFSocketServer : NSObject
 
-@property (nonatomic) int errorCode;
-@property (nonatomic) CFSocketRef sRef;
+@property (nonatomic)                  int                        errorCode;
+@property (nonatomic)                  CFSocketRef                sRef;
 
-@property (nonatomic, weak) id <CFSocketServerDelegate> delegate;
+@property (nonatomic, weak, readonly) id <CFSocketServerDelegate> delegate;
 
-- (instancetype)    initOnPort: (int) port
-                 andServerType: (CFNetworkServerType) serverType;
+//- (instancetype)    initOnPort: (int) port
+//                 andServerType: (CFNetworkServerType) serverType;
+
+- (instancetype)    initOnPort: (int)                         port
+                     delegate : (id <CFSocketServerDelegate>) delegate
+                 andServerType: (CFNetworkServerType)         serverType;
 
 
 #pragma mark   VoIP server type methods

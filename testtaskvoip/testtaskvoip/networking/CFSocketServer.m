@@ -43,9 +43,13 @@ typedef NS_ENUM (NSUInteger, CFSocketServerState)
 @implementation CFSocketServer
 
 
--(instancetype) initOnPort: (int) port
-             andServerType: (CFNetworkServerType) sType
+-(instancetype) initOnPort: (int)                        port
+                  delegate: (id<CFSocketServerDelegate>) delegate
+             andServerType: (CFNetworkServerType)        sType
 {
+    
+    _delegate = delegate;
+    
     struct sockaddr_in servaddr;
 	CFRunLoopSourceRef source;
     const CFSocketContext context = {
@@ -306,7 +310,7 @@ void receiveDataData (
     CFDataRef df       = (CFDataRef)         data;
     NSData    *imgData = (__bridge NSData *) df;
     
-    NSLog(@"Receiving data: %zu", imgData.length);
+    NSLog(@"Receiving data: %zu", (unsigned long)imgData.length);
     
     struct sockaddr_in addr = *(struct sockaddr_in *) CFDataGetBytePtr(address);
     char buf[INET6_ADDRSTRLEN];
@@ -341,7 +345,7 @@ void acceptConnectionVoIPCall (
     CFSocketServer __weak *weakSelf = (__bridge CFSocketServer *) info;
     
     
-    dispatch_async (
+    dispatch_sync (
                         dispatch_get_main_queue(),
                         ^(void)
                          {

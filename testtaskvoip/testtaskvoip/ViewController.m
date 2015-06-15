@@ -54,8 +54,8 @@
                     ^(void)
                      {
                          self.voipCFSocketServer = [[CFSocketServer alloc]    initOnPort: 5060
+                                                                                delegate: self
                                                                            andServerType: SERVERTYPEVOIP];
-                         self.voipCFSocketServer.delegate = self;
                      }
                    );
     
@@ -104,7 +104,7 @@
         
         self.clientStreamController = [[KMP_NSStreamController alloc] initWithURLString: @"192.168.2.1"
                                                                          controllerType: CLIENT ];
-        _audioController.delegate = _clientStreamController;
+        self.audioController.delegate = (id)_clientStreamController;
         [_clientStreamController start];
         
         [thisButton setTitle: @"End VoIP Call"
@@ -183,6 +183,8 @@ typedef NS_OPTIONS(NSUInteger, NSStreamEvent) {
 - (void) needAcceptConnectionVoIPCall: (CFSocketServer *) theCFSocketServer
 
 {
+    
+    MDLog(@" \n\n\n");
     //CFSocketServer *
     self.acceptVoIPCallButton.hidden = NO;
     

@@ -25,4 +25,5 @@ build/
 Debug/
 Release/
 Build/
-testtaskvoip/Build/
+/testtaskvoip/Build/
+/Build/Products/Debug-iphonesimulator/

@@ -24,3 +24,5 @@ xcuserdata/
 build/
 Debug/
 Release/
+Build/
+testtaskvoip/Build/
